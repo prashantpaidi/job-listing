@@ -1,10 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
+var bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+
+// routes
+const userRoute = require('./routes/user');
 
 const app = express();
 dotenv.config();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.get('/health', (req, res) => {
   const data = {
@@ -19,6 +25,8 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
   res.send('Hello World!!');
 });
+
+app.use('/users', userRoute);
 
 app.listen(process.env.PORT, () => {
   mongoose
