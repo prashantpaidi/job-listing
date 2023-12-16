@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 // routes
 const userRoute = require('./routes/user');
+const jobRoutes = require('./routes/job');
 
 const app = express();
 dotenv.config();
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', userRoute);
+app.use('/jobs', jobRoutes);
 
 app.use((req, res, next) => {
   const err = new Error('Not found');
