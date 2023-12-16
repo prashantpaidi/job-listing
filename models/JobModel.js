@@ -44,10 +44,6 @@ const JobSchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
-  isAdmin: {
-    type: Boolean,
-    default: false,
-  },
   recruiterName: { type: String, required: true },
 });
 const Job = mongoose.model('job', JobSchema);

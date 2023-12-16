@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
 
     const token = jwt.sign({ email: newUser.email }, process.env.JWT_SECRET);
 
-    res.status(201).json({ token, user: newUser });
+    res.status(201).json({ token, user: email, recruiterName: name });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -50,20 +50,14 @@ router.post('/login', async (req, res) => {
 
     const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET);
 
-    res.json({ token, user: { id: user._id, email: user.email } });
+    res.json({
+      token,
+      user: { id: user._id, email: user.email, recruiterName: user.name },
+    });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
-// router.get('/', async (req, res) =>{
-//     const userList = await User.find().select('-passwordHash');
-
-//     if(!userList) {
-//         res.status(500).json({success:false})
-//     }
-//     res.send(userList);
-// })
 
 module.exports = router;
