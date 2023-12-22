@@ -1,0 +1,92 @@
+.job-description {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.job-description__header {
+  z-index: 10;
+  background-color: #ffff;
+  margin-top: 4.5rem;
+  position: sticky;
+  top: 4rem;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2rem;
+  box-shadow: 0px 4px 23px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.job-description__details {
+  padding: 0.6rem 1.6rem;
+  background-color: #ffff;
+  box-shadow: 0px 2px 35px 1px rgba(0, 0, 0, 0.1);
+}
+
+.job-description__time {
+  color: #999999;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.job-description__title-container {
+  justify-content: space-between;
+}
+
+.button--edit-job {
+  background-color: #ed5353;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  height: 40px;
+}
+
+.button--edit-job:hover {
+  background-color: transparent;
+  border: 1px solid #ed5353;
+  color: #ed5353;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.job-location {
+  color: #ed5353;
+}
+
+.job-description__salary-duration-container {
+  justify-content: flex-start;
+  width: 40%;
+}
+
+.salary-info,
+.duration-info {
+  margin: 0;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.salary-info {
+  margin-right: 2rem;
+}
+
+.about-section__description {
+  color: #595959;
+  line-height: 2rem;
+}
+
+.skills-list {
+  justify-content: flex-start;
+  color: #595959;
+  flex-direction: row;
+}
+
+.skill-item {
+  background-color: #ffeeee;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.6rem;
+}

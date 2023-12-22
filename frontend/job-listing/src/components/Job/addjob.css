@@ -1,0 +1,132 @@
+/* ======================================== add job ==================================== */
+
+/* Main Container */
+.add-job {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+/* Left Section */
+.add-job-left {
+  margin-top: 1rem;
+  width: 50%;
+  height: 99%;
+  padding: 5rem 3rem;
+}
+
+.add-job-left .add-job-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  margin-bottom: 0.7rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.input-box label {
+  flex: 20%;
+}
+
+/* Input Styles */
+.add-job-input {
+  background-color: #fff;
+  border: 2px solid #c2c2c2;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 70%;
+  font-size: 15.651px;
+}
+
+.add-job-input:focus {
+  outline-color: #7b7b7b;
+}
+
+.add-job-input::placeholder {
+  color: #adadad;
+}
+
+/* Select Styles */
+.input-select-type {
+  width: 20%;
+  color: #adadad;
+}
+
+/* Button Styles */
+.button {
+  border: 1px solid #cecece;
+  background-color: transparent;
+  color: #c2c2c2;
+}
+
+/* Add Job Button */
+.add-job-btns {
+  margin-top: 0.6rem;
+  justify-content: flex-end;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  border: 1px solid #c2c2c2;
+  color: #c2c2c2;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  margin-left: 15vw;
+  margin-right: 1vw;
+}
+
+.cancel-btn:hover {
+  cursor: pointer;
+}
+
+/* + Add Job Button */
+.add-job-btn {
+  background-color: #ed5353;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  border: none;
+  font-weight: 600;
+}
+
+/* Right Section */
+.add-job-right {
+  background-image: url('add-job.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 50%;
+}
+
+.select-type-box-input-label label {
+  flex-grow: unset;
+}
+
+/* Header Styles */
+.reg-h {
+  color: #000;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.3rem;
+}
+
+.right-section-text {
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.edit-job-btns {
+  justify-content: flex-end;
+}
+
+/* ====================== add job =============================== */

@@ -30,8 +30,8 @@ export default function Login() {
 
       const responseData = await response.json();
       console.log(responseData);
-      localStorage.setItem('recruiterName', responseData.recruiterName);
-      localStorage.setItem('name', responseData.name);
+      localStorage.setItem('recruiterName', responseData.user.recruiterName);
+      localStorage.setItem('email', responseData.user.email);
       localStorage.setItem('token', responseData.token);
       navigate('/');
     } catch (error) {
