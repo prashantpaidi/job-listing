@@ -87,13 +87,14 @@
 }
 
 /* + Add Job Button */
-.add-job-btn {
+.add-job-btn-form {
   background-color: #ed5353;
   color: #fff;
   border-radius: 5px;
   padding: 1em 2em;
   border: none;
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* Right Section */

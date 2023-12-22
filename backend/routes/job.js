@@ -121,7 +121,7 @@ router.put('/update/:id', isAuthenticated, async (req, res) => {
 
 // Get Job Posts with Filters API
 router.get('/', async (req, res) => {
-  const { jobType, skills } = req.query;
+  const { jobType, skills, position } = req.query;
 
   console.log(skills);
   // return res.status(200).json({ message: 'Test' });
@@ -135,6 +135,11 @@ router.get('/', async (req, res) => {
     if (skills) {
       query.skills = { $in: skills };
     }
+
+    if (position) {
+      query.position = { $regex: new RegExp(position, 'i') }; // Case-insensitive position search
+    }
+
     console.log(query);
     const jobs = await Job.find(query).sort({ createdAt: -1 });
 

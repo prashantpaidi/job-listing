@@ -305,7 +305,7 @@ export default function AddJob() {
             <button onClick={handleCancel} className='button cancel-btn'>
               Cancel
             </button>
-            <button type='submit' className='button add-job-btn'>
+            <button type='submit' className='button add-job-btn-form'>
               {edit ? 'Edit Job' : '+ Add Job'}
             </button>
           </div>
