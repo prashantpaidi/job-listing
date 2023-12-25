@@ -22,7 +22,7 @@ export default function JobDetail() {
       setIsLoggedIn(false);
     }
 
-    fetch(`http://localhost:3000/jobs/${id}`, options)
+    fetch(`${import.meta.env.VITE_APP_VERCEL_BACKEND_URL}/jobs/${id}`, options)
       .then((response) => response.json())
       .then((response) => {
         setJob({ ...response.job });

@@ -44,7 +44,10 @@ export default function AddJob() {
     if (id) {
       setId(id);
       const options = { method: 'GET' };
-      fetch(`http://localhost:3000/jobs/${id}`, options)
+      fetch(
+        `${import.meta.env.VITE_APP_VERCEL_BACKEND_URL}/jobs/${id}`,
+        options
+      )
         .then((response) => response.json())
         .then((response) => setFormData({ ...response.job }))
         .catch((err) => console.error(err));
@@ -78,14 +81,17 @@ export default function AddJob() {
     const data = { ...formData, recruiterName: recruiterName };
 
     try {
-      const response = await fetch('http://localhost:3000/jobs/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          token: token,
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_APP_VERCEL_BACKEND_URL}/jobs/create`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            token: token,
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (!response.ok) {
         alert('An error ocurred, please try again');
@@ -128,14 +134,17 @@ export default function AddJob() {
     }
     const data = { ...formData, recruiterName: recruiterName };
     try {
-      const response = await fetch(`http://localhost:3000/jobs/update/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          token: token,
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_APP_VERCEL_BACKEND_URL}/jobs/update/${id}`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            token: token,
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (!response.ok) {
         alert('An error ocurred, please try again');

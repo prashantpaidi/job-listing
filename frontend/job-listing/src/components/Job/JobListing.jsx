@@ -20,7 +20,6 @@ export default function JobListing() {
     }
   }, []);
 
-
   const handleSkillChange = (event) => {
     const selectedSkill = event.target.value;
     if (selectedSkill !== 'Skills' && !selectedSkills.includes(selectedSkill)) {
@@ -36,7 +35,6 @@ export default function JobListing() {
     setSelectedSkills(updatedSkills);
   };
 
-
   useEffect(() => {
     // Fetch jobs based on filters
     const fetchJobs = async () => {
@@ -51,9 +49,11 @@ export default function JobListing() {
           });
         }
 
-        console.log(`http://localhost:3000/jobs?${queryParams}`);
+        console.log(
+          `${import.meta.env.VITE_APP_VERCEL_BACKEND_URL}/jobs?${queryParams}`
+        );
         const response = await fetch(
-          `http://localhost:3000/jobs?${queryParams}`
+          `${import.meta.env.VITE_APP_VERCEL_BACKEND_URL}/jobs?${queryParams}`
         );
         const data = await response.json();
 
